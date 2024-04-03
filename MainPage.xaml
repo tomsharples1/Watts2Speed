@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Watts2Speed2._0.MainPage"
+             Title="WATTS2SPEED">
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="280"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition Width="0.25*"/>
+
+        </Grid.ColumnDefinitions>
+        <Frame>
+            <Label Text="Watts2Speed" Grid.Row="0" HorizontalTextAlignment="Center" FontSize="120" TextColor ="White" HeightRequest="120"/>
+        </Frame>
+
+        <Label Text="Power" Grid.Row="1" Grid.Column="0" FontSize="30" Padding="10"/>
+        <Entry x:Name="powerInput" Grid.Row="2" Placeholder="Enter Power" FontSize="30"/>
+
+        <Label Text="CdA" Grid.Row="3" Grid.Column="0" FontSize="30" Padding="10"/>
+        <Entry x:Name="cdaInput" Placeholder="Enter CdA" Grid.Row="4" FontSize="30"/>
+
+        <Label Text="Air Density" Grid.Row="5" Grid.Column="0" FontSize="30" Padding="10"/>
+        <Entry x:Name="pInput" Grid.Row="6" Placeholder="Enter Air density" FontSize="30"/>
+
+        <Label Text="Weight" Grid.Row="7" Grid.Column="0" FontSize="30" Padding="10"/>
+        <Entry x:Name="massInput" Grid.Row="8" Placeholder="Enter Weight" FontSize="30"/>
+
+        <Label Text="Crr" Grid.Row="9" Grid.Column="0" FontSize="30" Padding="10"/>
+        <Entry x:Name="crrInput" Grid.Row="10" Placeholder="Enter Crr" FontSize="30"/>
+
+        <Label Text="Drivetrain loss" Grid.Row="11" Grid.Column="0" FontSize="30" Padding="10"/>
+        <Entry x:Name="dtlInput" Grid.Row="12" Placeholder="Enter Drivetrain loss" FontSize="30"/>
+
+        <Button Text="Calculate"
+                Grid.Row="13"
+                Grid.Column="0"
+                TextColor="white"
+                BackgroundColor="#00cc00"
+                FontSize="50"
+                Grid.RowSpan="2"
+                Clicked="Calculate"/>
+
+
+        <Button Text="Default"
+                Grid.Row="13"
+                Grid.Column="1"
+                Clicked="Default"
+                Padding="20"
+                BackgroundColor="Gray"
+                TextColor="White"
+                FontSize="30"/>
+
+        <Button Text="Clear"
+                Grid.Row="14"
+                Grid.Column="1"
+                Padding="20"
+                Clicked="Clear"
+                BackgroundColor="Red"
+                TextColor="White"
+                FontSize="30"/>
+
+        <Label x:Name="result"
+               Grid.Row="0"
+               Grid.Column="5"
+               Text="Result:"
+               FontSize="40"/>
+
+    </Grid>
+
+</ContentPage>
+
